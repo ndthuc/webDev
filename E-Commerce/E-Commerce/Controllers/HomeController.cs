@@ -19,7 +19,20 @@ namespace E_Commerce.Controllers
         public ActionResult Index2()
         {
             List<Product> products = db.Products.Take(16).ToList();
+
+            List<Product> featureProducts = db.Products.Take(10).ToList();
+
+            ViewBag.featureProducts = featureProducts;
+
             return View(products);
+        }
+
+        //Category
+
+        public ActionResult loadCategory()
+        {
+            List<Category> category = db.Categories.ToList();
+            return PartialView(category);
         }
 
         public ActionResult About()

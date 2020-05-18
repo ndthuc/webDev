@@ -1,0 +1,7 @@
+﻿@model List<E_Commerce.Models.Category>
+<ul>
+    @foreach (var cat in Model)
+    {
+        <li><a title="Aenean" href="@Url.Action("ViewListProduct", "Category", new { id = cat.CategoryID}, null)">@cat.CategoryName</a></li>
+    }
+</ul>

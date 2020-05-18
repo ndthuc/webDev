@@ -149,14 +149,19 @@
         <div id="sidebar">
             <div class="box">
                 <h2>Quick Links</h2>
-                <ul>
+
+                <!--category-->
+
+                @Html.Action("loadCategory", "Home")
+
+                @*<ul>
                     <li><a title="Aenean" href="#">Aenean</a></li>
                     <li><a title="Suspendisse" href="#">Suspendisse</a></li>
                     <li><a title="Pellentesque" href="#">Pellentesque</a></li>
                     <li><a title="Mauris" href="#">Mauris</a></li>
                     <li><a title="semper nec faucibus" href="#">semper nec faucibus</a></li>
                     <li><a title="vel ultrices" href="#">vel ultrices</a></li>
-                </ul>
+                </ul>*@
             </div>
         </div>
         <!-- END Sidebar -->
@@ -166,7 +171,7 @@
 
 
 
-            @RenderBody();
+            @RenderBody()
 
 
 

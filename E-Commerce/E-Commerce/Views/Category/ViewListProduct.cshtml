@@ -1,0 +1,30 @@
+﻿@model IEnumerable<E_Commerce.Models.Product>
+
+@{
+    ViewBag.Title = "ViewListProduct";
+}
+
+<div class="products">
+    <h2>Products</h2>
+
+    @foreach (var pro in Model)
+    {
+        <div class="product-holder">
+            <div class="product">
+                <a title="Details" href="@Url.Action("Deteil", "Product", new { id = pro.ProductID }, null)">
+                    <img src="~/css/images/product/@pro.ProductImg" alt="product img" />
+                </a>
+                <p>Case Model</p>
+            </div>
+
+            <p>@pro.ProductName</p>
+            <div class="price-label">
+                <strike>$117.50</strike>
+                <p class="price">@pro.Price</p>
+            </div>
+        </div>
+    }
+
+    <div class="cl"></div>
+</div>
+
