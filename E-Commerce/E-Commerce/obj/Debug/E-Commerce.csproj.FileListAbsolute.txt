@@ -69,7 +69,6 @@ C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\bin\System.Web.Web
 C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\bin\Newtonsoft.Json.xml
 C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\bin\Antlr3.Runtime.pdb
 C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\obj\Debug\E-Commerce.csprojAssemblyReference.cache
 C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\obj\Debug\E-Commerce.csproj.CoreCompileInputs.cache
 C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\obj\Debug\E-Commerce.csproj.CopyComplete
 C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\obj\Debug\E-Commerce.dll
@@ -78,3 +77,4 @@ C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\bin\EntityFramewor
 C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\bin\EntityFramework.SqlServer.dll
 C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\bin\EntityFramework.xml
 C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\bin\EntityFramework.SqlServer.xml
+C:\Users\doanthuc\Desktop\HK1933\webDev\E-Commerce\E-Commerce\obj\Debug\E-Commerce.csprojAssemblyReference.cache

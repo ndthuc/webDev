@@ -1,0 +1,49 @@
+﻿@model E_Commerce.Models.AccountModels.RegisterViewModel
+@{
+
+    ViewBag.Title = "Register";
+}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<h2>Register</h2>
+<link rel="stylesheet" href="~/css/Register.css" type="text/css" />
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    <div class="container">
+
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+
+        <label for="username"><b>User Name</b></label>
+        @Html.EditorFor(m => m.UserName, new  {
+       htmlAttributes =
+       new { @class = "input-in-register", @placeholder = "Enter Your UserName" } })
+
+        <label for="email"><b>Email</b></label>
+        @Html.EditorFor(m => m.Email, new  {
+       htmlAttributes =
+       new { @class = "input-in-register", @placeholder = "Enter Your Email" } })
+
+        <label for="psw"><b>Password</b></label>
+        @Html.PasswordFor(m => m.Password,
+       new { @class = "input-in-register", @placeholder = "Enter Your Password" } )
+
+        <label for="psw-repeat"><b>Confirm Password</b></label>
+        @Html.PasswordFor(m => m.ConfirmPassword,
+       new { @class = "input-in-register", @placeholder = "Confirm Your Passwords" } )
+
+        <label for="phone"><b>Phone Number</b></label>
+        @Html.EditorFor(m => m.Phone, new  {
+       htmlAttributes =
+       new { @class = "input-in-register", @placeholder = "Enter Your Phone Number" } })
+
+        <hr>
+        <p>By creating an account you agree to our <a class="link-in-register" href="#">Terms & Privacy</a>.</p>
+
+        <button type="submit" class="registerbtn">Register</button>
+    </div>
+
+    <div class="container signin">
+        <p>Already have an account? <a class="link-in-register" href="@Url.Action("Login", "Account")">Sign in</a>.</p>
+    </div>
+}

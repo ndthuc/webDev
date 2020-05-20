@@ -1,0 +1,41 @@
+﻿@model E_Commerce.Models.AccountModels.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="~/css/Login.css" type="text/css" />
+
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "login-form" }))
+{
+    <div class="imgcontainer">
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+
+        <label for="uname"><b>Username</b></label>
+        @Html.EditorFor(m => m.UserName, new { htmlAttributes =
+       new { @class = "input-in-login", @placeholder = "Enter Your UserName" } })
+
+        <label for="psw"><b>Password</b></label>
+        @Html.PasswordFor(m => m.Password, new { @class = "input-in-login",
+        @placeholder = "Enter Your Password" } )
+
+        <button type="submit">Login</button>
+        <label>
+            @Html.CheckBox("RememberMe", true)Remember me
+            @*<input type="checkbox" checked="checked" name="remember"> Remember me*@
+        </label>
+        <input type="checkbox" checked="checked" name="remember" value="RememberMe">
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+}

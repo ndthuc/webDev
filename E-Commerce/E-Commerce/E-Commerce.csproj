@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -137,14 +138,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccountModels\AccountManage.cs" />
+    <Compile Include="Models\AccountModels\LoginModel.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartModels\ProductModel.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\InvoiceDetail.cs" />
     <Compile Include="Models\Model1.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Promotion.cs" />
+    <Compile Include="Models\AccountModels\RegisterViewModel.cs" />
     <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -220,7 +225,9 @@
     <Content Include="css\images\top-nav-bg.png" />
     <Content Include="css\images\top-nav-end.png" />
     <Content Include="css\images\top-nav-start.png" />
+    <Content Include="css\Login.css" />
     <Content Include="css\prettyCheckboxes.css" />
+    <Content Include="css\Register.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -272,13 +279,17 @@
     <Content Include="Views\Home\loadCategory.cshtml" />
     <Content Include="Views\Category\ViewListProduct.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Fail.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Cart\Checkout.cshtml" />
+    <Content Include="Views\Account\MyProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Views\Account\" />
     <Folder Include="Views\Promotion\" />
   </ItemGroup>
   <ItemGroup>

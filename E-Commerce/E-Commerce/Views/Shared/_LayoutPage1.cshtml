@@ -47,11 +47,11 @@
         <!-- Navigation -->
         <div id="navigation">
             <ul>
-                <li><a title="Home" href="#">Home<span class="sep-right"></span></a></li>
+                <li><a title="Home" href="@Url.Action("Index2", "Home")">Home<span class="sep-right"></span></a></li>
                 <li>
-                    <a title="Games" href="#"><span class="sep-left"></span>Gamer<span class="sep-right"></span></a>
+                    <a title="About" href="@Url.Action("About", "Home")"><span class="sep-left"></span>About<span class="sep-right"></span></a>
                 </li>
-                <li><a title="Abstract" href="#"><span class="sep-left"></span>abstract<span class="sep-right"></span></a></li>
+                <li><a title="Contact" href="@Url.Action("Contact", "Home")"><span class="sep-left"></span>Contact<span class="sep-right"></span></a></li>
                 <li>
                     <a title="Retro" href="#"><span class="sep-left"></span>Retro<span class="sep-right"></span></a>
                     <div class="dd">
@@ -72,7 +72,7 @@
                     </div>
                 </li>
                 <li><a title="HI Tech" href="#"><span class="sep-left"></span>HI Tech<span class="sep-right"></span></a></li>
-                <li><a title="For Children" href="#"><span class="sep-left"></span>For Children<span class="sep-right"></span></a></li>
+                <li><a title="Promotion" href="#"><span class="sep-left"></span>Promotion<span class="sep-right"></span></a></li>
                 <li><a title="For Ladies" href="#"><span class="sep-left"></span>For Ladies<span class="sep-right"></span></a></li>
                 <li><a title="Sale!" href="#"><span class="sep-left"></span>sale!</a></li>
             </ul>
@@ -153,15 +153,7 @@
                 <!--category-->
 
                 @Html.Action("loadCategory", "Home")
-
-                @*<ul>
-                    <li><a title="Aenean" href="#">Aenean</a></li>
-                    <li><a title="Suspendisse" href="#">Suspendisse</a></li>
-                    <li><a title="Pellentesque" href="#">Pellentesque</a></li>
-                    <li><a title="Mauris" href="#">Mauris</a></li>
-                    <li><a title="semper nec faucibus" href="#">semper nec faucibus</a></li>
-                    <li><a title="vel ultrices" href="#">vel ultrices</a></li>
-                </ul>*@
+                
             </div>
         </div>
         <!-- END Sidebar -->

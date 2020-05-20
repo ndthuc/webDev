@@ -38,48 +38,11 @@
         <ul>
             @foreach (var pro in ViewBag.featureProducts)
             {
-                <li style="object-fit: contain">
-                    <a title="Details" href="@Url.Action("Deteil", "Product", new { id = pro.ProductID }, null)"><img src="~/css/images/product/@pro.ProductImg" alt="" /></a>
+                <li>
+                    <a title="Details" href="@Url.Action("Detail", "Product", new { id = pro.ProductID }, null)"><img src="~/css/images/product/@pro.ProductImg" alt="" /></a>
                     <p>@pro.ProductName</p>
                 </li>
-            }
-
-            @*<li>
-                    <a title="Details" href="#"><img src="~/css/images/2.jpg" alt="Solid brown computer case" /></a>
-                    <p>Model Name</p>
-                </li>
-                <li>
-                    <a title="Details" href="#"><img src="~/css/images/3.jpg" alt="Computer case with a fan on the side and blue lights" /></a>
-                    <p>Model Name</p>
-                </li>
-                <li>
-                    <a title="Details" href="#"><img src="~/css/images/4.jpg" alt="Half transparent black computer case" /></a>
-                    <p>Model Name</p>
-                </li>
-                <li>
-                    <a title="Details" href="#"><img src="~/css/images/5.jpg" alt="Compyter case with three extra fans and blue lights" /></a>
-                    <p>Model Name</p>
-                </li>
-                <li>
-                    <a title="Details" href="#"><img src="~/css/images/1.jpg" alt="Silver half transparent with blue lights computer case" /></a>
-                    <p>Model Name</p>
-                </li>
-                <li>
-                    <a title="Details" href="#"><img src="~/css/images/2.jpg" alt="Solid brown computer case" /></a>
-                    <p>Model Name</p>
-                </li>
-                <li>
-                    <a title="Details" href="#"><img src="~/css/images/3.jpg" alt="Computer case with a fan on the side and blue lights" /></a>
-                    <p>Model Name</p>
-                </li>
-                <li>
-                    <a title="Details" href="#"><img src="~/css/images/4.jpg" alt="Half transparent black computer case" /></a>
-                    <p>Model Name</p>
-                </li>
-                <li>
-                    <a title="Details" href="#"><img src="~/css/images/5.jpg" alt="Computer case with three extra fans and blue lights" /></a>
-                    <p>Model Name</p>
-                </li>*@
+            }            
         </ul>
     </div>
 </div>
