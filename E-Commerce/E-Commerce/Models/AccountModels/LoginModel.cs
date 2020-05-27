@@ -9,9 +9,9 @@ namespace E_Commerce.Models.AccountModels
 {
     public class LoginModel
     {
-        [Required]
+        [Required(ErrorMessage ="Please enter your user name")]
         public string UserName { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Please enter your password")]
         public string Password { get; set; }
         public bool RememberMe { get; set; }
     }

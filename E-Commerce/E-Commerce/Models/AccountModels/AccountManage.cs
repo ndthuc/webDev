@@ -51,8 +51,9 @@ namespace E_Commerce.Models.AccountModels
 
         public bool CheckUserLogin(LoginModel login)
         {
+            login.Password = EncryptedPassword(login.Password);
             User user = db.Users.Where(us => us.Account == login.UserName
-            & us.Password == EncryptedPassword(login.Password)).SingleOrDefault();
+            && us.Password == login.Password).SingleOrDefault();
             if (user == null)
             {
                 return false;

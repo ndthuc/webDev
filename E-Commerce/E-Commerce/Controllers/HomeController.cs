@@ -31,7 +31,7 @@ namespace E_Commerce.Controllers
 
         public ActionResult loadCategory()
         {
-            List<Category> category = db.Categories.ToList();
+            List<Category> category = db.Categories.Take(6).ToList();
             return PartialView(category);
         }
 

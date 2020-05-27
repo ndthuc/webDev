@@ -17,14 +17,16 @@
     </div>
 
     <div class="container">
-
         <label for="uname"><b>Username</b></label>
         @Html.EditorFor(m => m.UserName, new { htmlAttributes =
        new { @class = "input-in-login", @placeholder = "Enter Your UserName" } })
-
+        @Html.ValidationMessageFor(model => model.UserName, null, new { @class = "text-danger" })
+        <br />
         <label for="psw"><b>Password</b></label>
         @Html.PasswordFor(m => m.Password, new { @class = "input-in-login",
         @placeholder = "Enter Your Password" } )
+        @Html.ValidationMessageFor(model => model.Password)
+        @Html.ValidationMessage("Login")
 
         <button type="submit">Login</button>
         <label>

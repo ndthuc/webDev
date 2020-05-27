@@ -16,10 +16,15 @@ namespace E_Commerce.Controllers
             return View();
         }
 
-        public ActionResult Detail(int id)
+        //public ActionResult Detail(int id)
+        //{
+        //    Product product = db.Products.Where(pro => pro.ProductID == id).SingleOrDefault();
+        //    return View(product);
+        //}
+
+        public ActionResult Detail()
         {
-            Product product = db.Products.Where(pro => pro.ProductID == id).SingleOrDefault();
-            return View(product);
+            return View();
         }
 
     }

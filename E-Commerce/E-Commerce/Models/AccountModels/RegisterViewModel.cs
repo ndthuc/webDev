@@ -17,6 +17,7 @@ namespace E_Commerce.Models.AccountModels
         public string Email { get; set; }
 
         [Required]
+        [RegularExpression(@"/^0(1\d{9}|9\d{8})$/")]
         [StringLength(50)]
         public string Password { get; set; }
 

@@ -227,6 +227,7 @@
     <Content Include="css\images\top-nav-start.png" />
     <Content Include="css\Login.css" />
     <Content Include="css\prettyCheckboxes.css" />
+    <Content Include="css\ProductDetail.css" />
     <Content Include="css\Register.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />

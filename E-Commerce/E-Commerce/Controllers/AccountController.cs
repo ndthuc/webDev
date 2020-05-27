@@ -59,16 +59,31 @@ namespace E_Commerce.Controllers
         public ActionResult Login(LoginModel login)
         {
             AccountManage manage = new AccountManage();
-            if (manage.CheckUserLogin(login))
+            if (ModelState.IsValid)
             {
-                return View("MyProfile");
+                if (manage.CheckUserLogin(login))
+                {
+                    Session["user"] = login.UserName;
+                    return RedirectToAction("Index2", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("Login", "Wrong password or user name");
+                    return View();
+                }
             }
             else
             {
-                return View("Fail");
+                
+                return View();
             }
-
         }
 
+        public ActionResult Logout()
+        {
+            Session["user"] = null;
+            return RedirectToAction("Index2", "Home");
+        }
+        
     }
 }
