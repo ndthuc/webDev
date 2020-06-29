@@ -9,24 +9,23 @@ namespace E_Commerce.Models.AccountModels
 {
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Please enter your user name")]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter your email")]
         [RegularExpression("^.+@.+$")]
         public string Email { get; set; }
 
-        [Required]
-        [RegularExpression(@"/^0(1\d{9}|9\d{8})$/")]
+        [Required(ErrorMessage = "Please enter word")]
         [StringLength(50)]
         public string Password { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please confirm your password")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
 
-        [Required]
-        //[RegularExpression(@"^\+?(?:0|84)(?:\d){9}$")]
+        [Required(ErrorMessage = "Please enter your phone number")]
+        //[RegularExpression(@"/^0(1\d{9}|9\d{8})$/")]
         public string Phone { get; set; }
     }
 }

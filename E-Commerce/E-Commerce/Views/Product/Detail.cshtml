@@ -1,14 +1,35 @@
-﻿@*@model  E_Commerce.Models.Product*@
+﻿@model  E_Commerce.Models.Product
 
 @{
     ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
+<h2>Details of @Model.ProductName</h2>
 
+<div class="container">
+    <div class="col-md-6">
+        <img src="~/css/images/product/@Model.ProductImg" alt="Alternate Text" />
+    </div>
+    <div class="col-md-6">
+        <a href="#">@Model.ProductType</a>
+        <p>@Model.ProductName</p>
 
-@*<h2>Detail</h2>
-<img src="~/css/images/product/@Model.ProductImg" alt="Alternate Text" />
-<p>@Model.ProductName</p>*@
+        
+        <a class="btn btn-success btn-sm" href="@Url.Action("AddCart", "Cart",
+    new { ProductID = Url.RequestContext.RouteData.Values["id"]})">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            Thêm vào giỏ
+        </a>
 
+    </div>
+</div>
 
+@*<script type="text/javascript">
 
+    let Info = [];
+    function GetProductInfo() {
+        let Quantity = document.getElementById("quantity").value;
+        Info.push(Quantity);
+    }
+</script>*@

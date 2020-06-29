@@ -17,6 +17,10 @@
                 <a title="Details" href="@Url.Action("Detail", "Product", new { id = Model[i].ProductID }, null)">
                     <img src="~/css/images/product/@Model[i].ProductImg" alt="product img" />
                 </a>
+                @if (i == 1)
+                {
+                    <img class="sale-label" src="~/css/images/sale-label.png" alt="Sale!" />
+                }
                 <p>Case Model</p>
             </div>
 

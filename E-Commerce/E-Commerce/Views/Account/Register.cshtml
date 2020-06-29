@@ -9,39 +9,56 @@
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
 {
-    <div class="container">
+<div class="container">
 
-        <p>Please fill in this form to create an account.</p>
-        <hr>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
 
-        <label for="username"><b>User Name</b></label>
-        @Html.EditorFor(m => m.UserName, new  {
-       htmlAttributes =
-       new { @class = "input-in-register", @placeholder = "Enter Your UserName" } })
+    <label for="username"><b>User Name</b></label>
+    @Html.EditorFor(m => m.UserName, new  {
+   htmlAttributes =
+   new { @class = "input-in-register", @placeholder = "Enter Your UserName" } })
+    @Html.ValidationMessageFor(model => model.UserName)
+    <br />
 
-        <label for="email"><b>Email</b></label>
-        @Html.EditorFor(m => m.Email, new  {
-       htmlAttributes =
-       new { @class = "input-in-register", @placeholder = "Enter Your Email" } })
+    <label for="email"><b>Email</b></label>
+    @Html.EditorFor(m => m.Email, new  {
+   htmlAttributes =
+   new { @class = "input-in-register", @placeholder = "Enter Your Email" } })
 
-        <label for="psw"><b>Password</b></label>
-        @Html.PasswordFor(m => m.Password,
-       new { @class = "input-in-register", @placeholder = "Enter Your Password" } )
+    @Html.ValidationMessageFor(model => model.Email)
+    <br />
 
-        <label for="psw-repeat"><b>Confirm Password</b></label>
-        @Html.PasswordFor(m => m.ConfirmPassword,
-       new { @class = "input-in-register", @placeholder = "Confirm Your Passwords" } )
+    <label for="psw"><b>Password</b></label>
+    @Html.PasswordFor(m => m.Password,
+   new { @class = "input-in-register", @placeholder = "Enter Your Password" } )
 
-        <label for="phone"><b>Phone Number</b></label>
-        @Html.EditorFor(m => m.Phone, new  {
-       htmlAttributes =
-       new { @class = "input-in-register", @placeholder = "Enter Your Phone Number" } })
+    @Html.ValidationMessageFor(model => model.Password)
+    <br />
 
-        <hr>
-        <p>By creating an account you agree to our <a class="link-in-register" href="#">Terms & Privacy</a>.</p>
+    <label for="psw-repeat"><b>Confirm Password</b></label>
+    @Html.PasswordFor(m => m.ConfirmPassword,
+   new { @class = "input-in-register", @placeholder = "Confirm Your Passwords" } )
 
-        <button type="submit" class="registerbtn">Register</button>
-    </div>
+    @Html.ValidationMessageFor(model => model.ConfirmPassword, null, new { @class = "text-danger" })
+
+    <br />
+
+    <label for="phone"><b>Phone Number</b></label>
+    @Html.EditorFor(m => m.Phone, new  {
+   htmlAttributes =
+   new { @class = "input-in-register", @placeholder = "Enter Your Phone Number" } })
+
+    @Html.ValidationMessageFor(model => model.Phone, null, new { @class = "text-danger" })
+
+    @Html.ValidationMessage("Register")
+    <br />
+
+    <hr>
+    <p>By creating an account you agree to our <a class="link-in-register" href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+</div>
 
     <div class="container signin">
         <p>Already have an account? <a class="link-in-register" href="@Url.Action("Login", "Account")">Sign in</a>.</p>

@@ -26,27 +26,33 @@ namespace E_Commerce.Controllers
         public ActionResult Register(RegisterViewModel newUser)
         {
             AccountManage manage = new AccountManage();
-            if (manage.CheckUserName(newUser.UserName)
-                && manage.CheckEmail(newUser.Email)
-                && manage.CheckPhonenumber(newUser.Phone))
+            if (ModelState.IsValid)
             {
-                User user = new User
+                
+                if (manage.CheckUserName(newUser.UserName)
+                    && manage.CheckEmail(newUser.Email)
+                    && manage.CheckPhonenumber(newUser.Phone))
                 {
-                    Account = newUser.UserName,
-                    Email = newUser.Email,
-                    PhoneNumber = newUser.Phone,
-                    Password = manage.EncryptedPassword(newUser.Password),
-                    TypeUser = "normal"
-                };
+                    User user = new User
+                    {
+                        Account = newUser.UserName,
+                        Email = newUser.Email,
+                        PhoneNumber = newUser.Phone,
+                        Password = manage.EncryptedPassword(newUser.Password),
+                        TypeUser = "normal"
+                    };
 
-                db.Users.Add(user);
-                db.SaveChanges();
+                    db.Users.Add(user);
+                    db.SaveChanges();
 
+                }
+                else
+                {
+                    ModelState.AddModelError("Register", "Please Check Your Infomation");
+                    return View();
+                }
             }
-            else
-            {
-                return View("Fail");
-            }
+            
 
             return View();
         }
